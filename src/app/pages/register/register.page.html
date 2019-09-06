@@ -1,0 +1,52 @@
+<ion-content  color="dark">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-grid>
+      <ion-row color="dark" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <img src="assets/icon/isBusy.png" class="displayed" height='80' width='150'/>
+          </div>
+          <div padding >
+            <ion-item>
+              <ion-input  class="ion-text-center" formControlName="nom" type="text" placeholder="nom" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="ion-text-center" formControlName="prenom" type="text" placeholder="prenom" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  class="ion-text-center" formControlName="username" type="text" placeholder="username" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="ion-text-center" formControlName="email" type="email" placeholder="email@email.com" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-select  class="ion-text-center" formControlName="ville">
+                <ion-select-option class="ion-text-center" *ngFor="let ville of villes" [value]="ville" >{{ville}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input class="ion-text-center" formControlName="adresse" type="text" placeholder="adresse" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="ion-text-center" formControlName="motDePasse" type="password" placeholder="mot de passe" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="ion-text-center" formControlName="confirmPassword" type="password" placeholder="confirmer mot de passe" ></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="large" type="submit" expand="block" >Sign up</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+   
+<ion-row class="first">
+          <div text-center size-xs="10" class="ion-text-center">
+        already have an account  <a routerLink='/login'>
+          Sign in</a>
+          </div>
+</ion-row>
+       </ion-grid>
+  </form>
+</ion-content>

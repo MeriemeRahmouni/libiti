@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar  color="dark">
+      <ion-buttons slot="start">
+
+          <ion-back-button defaultHref="/search"></ion-back-button>
+    
+        </ion-buttons>
+    
+    <ion-title>Ajouter un emplacement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br> <br>
+      <ion-item>
+        <ion-label class="my-label"  size position="floating">Nom de l'emplacement</ion-label>
+        <ion-input rows="4" [(ngModel)]="formulaire.nomEmplacement"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="my-label"  size position="floating">Catégorie</ion-label>
+        <ion-input rows="4" [(ngModel)]="formulaire.categorie"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="my-label"  size position="floating">Latitude</ion-label>
+        <ion-input rows="4" [(ngModel)]="formulaire.latitude"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="my-label"  size position="floating">Longitude</ion-label>
+        <ion-input rows="4" [(ngModel)]="formulaire.longitude"></ion-input>
+      </ion-item>
+      <ion-button class="bouton"  position="center" (click)="suggerer()" >Envoyer</ion-button>    
+</ion-content>
